@@ -1,4 +1,4 @@
-<!-- Note: For Backend Code Contact Me at tejukamble1818@gmail.com -->
+<p><strong>Note:</strong> For Backend Code Contact Me at <a href="mailto:tejukamble1818@gmail.com">tejukamble1818@gmail.com</a></p>
 
 # <span style="color: #1E90FF;">HeavenOnWheels</span>
 
