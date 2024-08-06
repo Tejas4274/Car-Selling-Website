@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="title">Registration Form</div>
+    <div class="content">
+        <form #regForm="ngForm" (ngSubmit)="saveuser(regForm)">
+            <div class="user-details">
+
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" placeholder="Enter your First Name" name="firstName" required ngModel>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" placeholder="Enter your Last Name" name="lastName" required ngModel>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" name="email" required ngModel>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your number" name="mobileNumber" required ngModel>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" placeholder="Enter your username" name="username" required ngModel>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your password" name="password" required ngModel>
+                </div>
+            </div>
+
+
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+         
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="main">
+    <div class="sidebar">
+        <h2>Admin Functionality</h2>
+        <a routerLink="notfound">Dashboard</a>
+        <a routerLink="notfound">Car Management</a>
+        <a routerLink="notfound">Sales Management</a>
+        <a routerLink="notfound">Customer Management</a>
+    </div>
+
+    <div class="main-content">
+        <div class="content-summary">
+            <div class="button add-car-button">
+                <button type="submit" (click)="Operations()">Add New Car</button>
+            </div>
+
+            <div class="button update-car-button">
+                <button type="submit" (click)="UpdateOperation()">Update A Car</button>
+            </div>
+
+            <div class="button delete-car-button">
+                <button type="submit" (click)="DeleteOperation()">Delete A Car</button>
+            </div>
+        </div>
+        <div class="content-summary">
+            <div class="card">
+                <h3>Total Cars</h3>
+                <p>{{this.totalcar}}</p>
+            </div>
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p>{{this.totalcust}}</p>
+            </div>
+            <div class="card">
+                <h3>Total User</h3>
+                <p>{{this.totaluser}}</p>
+            </div>
+        </div>
+        <div class="content-details">
+            <h2>Cars</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>CarName</td>
+                        <td>Image</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let car of cars">
+                        <td>{{ car.carName }}</td>
+                        <td><img [src]="car.imageLink" [alt]="car.carName" loading="lazy"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

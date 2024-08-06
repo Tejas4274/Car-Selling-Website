@@ -1,0 +1,53 @@
+<main>
+    <article>
+        <section class="featured-car">
+            <div class="container">
+                <ul class="featured-car-list">
+                    <li *ngFor="let car of cars">
+                        <div class="featured-car-card">
+                            <figure class="card-banner">
+                                <img [src]="car.imageLink" [alt]="car.carName" loading="lazy" width="440" height="300"
+                                    class="w-100">
+                            </figure>
+                            <div class="card-content">
+                                <div class="card-title-wrapper">
+                                    <h3 class="h3 card-title">
+                                        <a href="#">{{ car.carName }}</a>
+                                    </h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li class="card-list-item">
+                                        <ion-icon name="people-outline"></ion-icon>
+                                        <span class="card-item-text">{{ car.seatCapacity | titlecase }}</span>
+                                    </li>
+                                    <li class="card-list-item">
+                                        <ion-icon name="flash-outline"></ion-icon>
+                                        <span class="card-item-text">{{ car.fuelType | titlecase}}</span>
+                                    </li>
+                                    <li class="card-list-item">
+                                        <ion-icon name="speedometer-outline"></ion-icon>
+                                        <span class="card-item-text">{{ car.mileage }}</span>
+                                    </li>
+                                    <li class="card-list-item">
+                                        <ion-icon name="hardware-chip-outline"></ion-icon>
+                                        <span class="card-item-text">{{ car.transmission | titlecase}}</span>
+                                    </li>
+                                </ul>
+                                <div class="card-price-wrapper">
+                                    <p class="card-price">
+                                        <b class="price">{{ car.carPrice | currency:'INR' }}</b>
+                                        
+                                    </p>
+                                    <a class="btn fav-btn" aria-label="Add to favourite list">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                    <button class="btn" (click)="checkuser(car.carName)">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</main>

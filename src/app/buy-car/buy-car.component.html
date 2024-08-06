@@ -1,0 +1,67 @@
+<table>
+    <thead>
+        <tr>
+            <th>Car Image</th>
+            <th>Car Name</th>
+            <th>Seat Capacity</th>
+            <th>Fuel</th>
+            <th>Mileage</th>
+            <th>Transmission</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cardetails">
+            <td><img [src]="car.imageLink" [alt]="car.carName" loading="lazy"></td>
+            <td>{{car.carName}}</td>
+            <td>{{car.seatCapacity}}</td>
+            <td>{{car.fuelType}}</td>
+            <td>{{car.mileage}}</td>
+            <td>{{car.transmission}}</td>
+            <td>{{car.carPrice}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="cen">
+    <div class="container">
+        <h2>Please Fill Information Correct</h2>
+        <form #buyForm="ngForm" (ngSubmit)="Buy(buyForm)">
+
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="mobileno">Mobile Number:</label>
+                <input type="text" id="mobileno" name="mobileno" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="bankaccount">Bank Account Number:</label>
+                <input type="text" id="bankaccount" name="bankaccount" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="ifsc">IFSC Code:</label>
+                <input type="text" id="ifsc" name="ifsc" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required ngModel></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Your Car:</label>
+                <input type="text" id="carnames" name="carNames" [(ngModel)]="this.carname" required>
+            </div>
+
+            <div class="form-group button">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Admin Login</h2>
+    <form #logForm="ngForm"  (ngSubmit)="checkadmin(logForm)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" class="form-control" required name="username" ngModel><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" required name="password" ngModel><br>
+        <input type="submit" class="btn" value="Login">
+        <p>Forgot password? <a href="#">Click here</a></p>
+    </form>
+</div>

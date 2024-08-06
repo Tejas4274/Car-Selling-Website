@@ -1,0 +1,34 @@
+<div class="cent">
+    <h1>Delete A Car</h1>
+    <table class="car-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image Link</th>
+                <th>Car Name</th>
+                <th>Seat Capacity</th>
+                <th>Fuel Type</th>
+                <th>Milage</th>
+                <th>Transmission</th>
+                <th>Car Price</th>
+                <th>Action Delete</th>
+                <th>Action Update</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let d of arr">
+                <td>{{d.Id}}</td>
+                <td><img [src]="d.imageLink" alt="Car Image" class="car-image"></td>
+                <td>{{d.carName}}</td>
+                <td>{{d.seatCapacity}}</td>
+                <td>{{d.fuelType}}</td>
+                <td>{{d.mileage}}</td>
+                <td>{{d.transmission}}</td>
+                <td>{{d.carPrice}}</td>
+                <td><button class="delete-btn" (click)="deleteCar(d.carName)">Delete</button></td>
+                <td><button class="update-btn" (click)="updateCar(d.carName)">update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

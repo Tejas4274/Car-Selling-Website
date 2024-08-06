@@ -1,0 +1,661 @@
+
+
+
+.add-car-button button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.update-car-button button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.delete-car-button button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-car-button button:hover,
+.update-car-button button:hover,
+.delete-car-button button:hover {
+  opacity: 0.8;
+}
+
+.button {
+  margin: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height:400px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #34495e;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f4f7f9;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+  border: 2px solid red;
+  margin-left: 25%;
+}
+
+.main {
+  display: flex;
+  margin-top: 13.5%;
+  flex-direction: row;
+}
+
+.header {
+  width: 70%;
+  height: 100px;
+}
+
+.header .quick-actions button,
+.header .user-profile button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header .quick-actions button:hover,
+.header .user-profile button:hover {
+  background-color: #2980b9;
+}
+
+.content-summary {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.content-details {
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.header {
+  height: 70px;
+  margin-top: 8%;
+}
+.quick-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-profile {
+  display: flex;
+  margin-left: 20%;
+}
+
+.content-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-details h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.content-details thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.content-details thead td {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-details tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.content-details tbody tr td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-details tbody tr td img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.content-details tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .header {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .header .quick-actions,
+  .header .user-profile {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .main {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .sidebar {
+    width: 300px;
+  }
+
+  .main-content {
+    margin-left: 300px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+}
+
+/* Base styles */
+/* 
+.add-car-button button,
+.update-car-button button,
+.delete-car-button button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-car-button button {
+  background-color: green;
+}
+
+.update-car-button button {
+  background-color: blue;
+}
+
+.delete-car-button button {
+  background-color: red;
+}
+
+.add-car-button button:hover,
+.update-car-button button:hover,
+.delete-car-button button:hover {
+  opacity: 0.8;
+}
+
+.button {
+  margin: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #34495e;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f4f7f9;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+  border: 2px solid red;
+  margin-left: 25%;
+  width: 70%;
+  height: 100px;
+}
+
+.header .quick-actions button,
+.header .user-profile button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header .quick-actions button:hover,
+.header .user-profile button:hover {
+  background-color: #2980b9;
+}
+
+.content-summary {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.content-details {
+  margin-top: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.header {
+  height: 70px;
+  margin-top: 8%;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-profile {
+  display: flex;
+  margin-left: 20%;
+}
+
+.content-details h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.content-details thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.content-details thead td {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-details tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.content-details tbody tr td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-details tbody tr td img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.content-details tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+
+@media (max-width: 575.98px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .main {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .user-profile {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .main {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .user-profile {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    margin: 5px;
+  }
+
+  .user-profile {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    margin: 10px;
+  }
+
+  .user-profile {
+    margin-left: 15%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin-left: 25%;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+
+  .header .quick-actions button,
+  .header .user-profile button {
+    margin-left: 10px;
+  }
+
+  .user-profile {
+    margin-left: 20%;
+  }
+} */

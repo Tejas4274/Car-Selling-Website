@@ -1,0 +1,208 @@
+<header class="header">
+  <div class="container">
+
+    <div class="overlay" data-overlay></div>
+
+    <a href="" class="logo">
+      <h3 class="logotext">HeavenOnWheels</h3>
+    </a>
+
+    <nav class="navbar" data-navbar>
+      <ul class="navbar-list">
+
+        <li>
+          <a routerLink="" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a routerLink="explore" class="navbar-link" data-nav-link>Explore cars</a>
+        </li>
+
+        <li>
+          <a routerLink="about" class="navbar-link" data-nav-link>About us</a>
+        </li>
+
+        <li>
+          <a *ngIf="!isLogin" routerLink="login" class="navbar-link" data-nav-link>Login</a>
+          <a *ngIf="isLogin" routerLink="logout" class="navbar-link" data-nav-link (click)="logout()">LogOut</a>
+        </li>
+
+        <li>
+          <a routerLink="view" class="btn" aria-labelledby="aria-label-txt" *ngIf="isLogin">
+            <ion-icon name="car-sport-sharp"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="header-contact">
+        <a href="" class="contact-link">+91 935 696 47 02</a>
+
+        <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+      </div>
+
+      <a href="" class="btn" aria-labelledby="aria-label-txt">
+        <ion-icon name="car-outline"></ion-icon>
+
+        <span id="aria-label-txt">WELCOME {{currentuser}}</span>
+      </a>
+
+      <a routerLink="register" class="btn user-btn" aria-label="Profile" *ngIf="!isLogin">
+        <ion-icon name="person-add-outline"></ion-icon>
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+
+<router-outlet>
+
+
+
+
+</router-outlet>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="" class="logo">
+          <!-- <img src="" alt="logo"> -->
+          <h3>HeavenOnWheels</h3>
+        </a>
+
+        <p class="footer-text">
+          Search for cheap cars in Pune. With a diverse fleet of 19,000 vehicles, Waydex offers its
+          consumers an
+          attractive and fun selection.
+        </p>
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Company</p>
+        </li>
+
+        <li>
+          <a routerLink="/about" class="footer-link">About us</a>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">Pricing plans</a>
+        </li>
+
+        <li>
+          <a routerLink="/contact" class="footer-link">Contact Us</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Support</p>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">Help center</a>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">Terms & conditions</a>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">Privacy policy</a>
+
+        </li>
+
+        <li>
+          <a routerLink="/feedback" class="footer-link">Feedback</a>
+        </li>
+
+      </ul>
+
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="card">
+        <span>Social</span>
+
+        <a class="social-link" href="">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 448 512" xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path style="fill:#0077B5;"
+                d="M100.28 448H7.4V148.9h92.88zm-46.4-341.9c-29.67 0-53.64-24.05-53.64-53.64C0 24.05 24.02 0 53.64 0 82.71 0 107 24.05 107 53.64 107 83.25 82.71 107.1 53.88 107.1h-.06zM447.9 448h-92.4V302.4c0-34.73-1.24-79.26-48.28-79.26-48.34 0-55.72 37.73-55.72 76.69V448H159.5V148.9h88.67v40.8h1.25c12.35-23.47 42.53-48.28 87.45-48.28 93.48 0 110.65 61.53 110.65 141.53V448z" />
+            </g>
+          </svg>
+        </a>
+
+        <a class="social-link" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 320 512" xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path style="fill:#1877F2;"
+                d="M279.14 288l14.22-92.66h-88.91V144c0-25.35 12.42-50.06 52.24-50.06H295V6.26S273.6 0 248.27 0c-73.22 0-121.23 44.38-121.23 124.72V195.3H56v92.66h70.54V512h92.66V288z" />
+            </g>
+          </svg>
+        </a>
+
+
+
+        <a class="social-link" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 24 24" xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path style="fill:#181717;"
+                d="M12 .5a11.5 11.5 0 0 0-3.64 22.43c.58.11.79-.25.79-.56 0-.28-.01-1.03-.01-2.01-2.94.64-3.56-1.42-3.56-1.42a2.8 2.8 0 0 0-1.17-1.55c-.96-.65.07-.63.07-.63a2.22 2.22 0 0 1 1.62 1.09 2.26 2.26 0 0 0 3.09.88 2.26 2.26 0 0 1 .67-1.42c-2.35-.27-4.82-1.18-4.82-5.26 0-1.16.42-2.1 1.1-2.85a3.86 3.86 0 0 1 .1-2.81s.88-.28 2.9 1.08a10.07 10.07 0 0 1 5.28 0c2.02-1.36 2.9-1.08 2.9-1.08.58 1.47.22 2.56.11 2.81.69.75 1.1 1.69 1.1 2.85 0 4.08-2.48 4.98-4.84 5.25.38.33.71.97.71 1.96 0 1.42-.01 2.56-.01 2.91 0 .31.21.68.79.56A11.5 11.5 0 0 0 12 .5" />
+            </g>
+          </svg>
+        </a>
+
+        <a class="social-link" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path style="fill:#FF0000;"
+                d="M475.078,110.247c-5.402-20.33-21.678-36.605-42.008-42.008C392.124,64,256.002,64,256.002,64S119.88,64,79.93,68.239 c-20.33,5.402-36.605,21.678-42.008,42.008C32,150.197,32,256.002,32,256.002s0,105.805,5.922,147.754 c5.402,20.33,21.678,36.605,42.008,42.008C119.88,448,256.002,448,256.002,448s136.124,0,176.074-4.239 c20.33-5.402,36.605-21.678,42.008-42.008C480,361.807,480,256.002,480,256.002S480,150.197,475.078,110.247z M208,336V176l144,80 L208,336z" />
+            </g>
+          </svg>
+        </a>
+
+
+
+      </div>
+
+      <h1 class="copyright">
+        &copy; 2024 <a href="">Seed Project</a>. All Rights Reserved
+      </h1>
+
+    </div>
+
+  </div>
+</footer>

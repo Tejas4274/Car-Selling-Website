@@ -1,0 +1,64 @@
+<h1>Update A Car</h1>
+<div class="center">
+    <form #updateForm="ngForm" *ngFor="let cars of cardeatils"  (ngSubmit)="updateCar(updateForm)">
+        <div class="form-group">
+            <label for="imageLink">Image Link:</label>
+            <input type="url" id="imageLink" name="imageLink"  [(ngModel)]="cars.imageLink" required ngModel>
+        </div>
+
+
+        <div class="form-group">
+            <label for="carName">Car Name:</label>
+            <input type="text" id="carName" name="carName" [(ngModel)]="cars.carName" required ngModel>
+        </div>
+
+
+        <div class="form-group">
+            <label for="seatCapacity">Seat Capacity:</label>
+            <input type="text" id="seatCapacity" name="seatCapacity" [(ngModel)]="cars.seatCapacity" required ngModel>
+        </div>
+
+
+        <div class="form-group">
+            <label for="fuelType">Fuel Type:</label>
+            <select id="fuelType" name="fuelType" [(ngModel)]="cars.fuelType" required ngModel>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="electric">Electric</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="mileage">Mileage (km/l):</label>
+            <input type="text" id="mileage" name="mileage" [(ngModel)]="cars.mileage" required ngModel>
+        </div>
+
+
+        <div class="form-group">
+            <label for="transmission">Transmission:</label>
+            <select id="transmission" name="transmission" [(ngModel)]="cars.transmission" required ngModel>
+                <option value="manual">Manual</option>
+                <option value="automatic">Automatic</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="carPrice">Car Price ($):</label>
+            <input type="text" id="carPrice" name="carPrice" [(ngModel)]="cars.carPrice" required ngModel>
+        </div>
+
+
+        <div class="form-group">
+                <input type="submit" value="Update A Car">
+        </div>
+
+        <div class="form-group">
+            <a routerLink="/deletecar"><input type="submit" value="Delete A Car"></a>
+        </div>
+
+    </form>
+    
+</div>
